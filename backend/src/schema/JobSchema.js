@@ -1,0 +1,41 @@
+const mongoose = require("mongoose");
+
+const jobEntrySchema = new mongoose.Schema({
+    job:{type:String},
+    address:{type:String},
+    fee:{type:Number},
+    contractDate: {type:String},
+    deliveredDate:{type:String},
+    feescollectedDate:{type:String},
+    feescollected: {type:Number},
+    paymentTerms: {type:String},
+    expense: {type:Number},
+    expenseTerms: {type:String},
+    subConductor: {type:String},
+    subConductorfee: {type:Number},
+    modumfee: {type:Number},
+    netfee: {type:Number},
+    internalReview: {type:String},
+    marketing:{type:String},
+    marketingpercent: {type:Number},
+    marketingfee:{type:Number},
+    corporatepercent:{type:Number},
+    corporatefee:{type:Number},
+    productionpercent: {type:Number},
+    productionfee:{type:Number},
+    appraiser1:{type:String},
+    appraiser1percent: {type:Number},
+    appraiser1fee:{type:Number},
+    appraiser2:{type:String},
+    appraiser2percent: {type:Number},
+    appraiser2fee:{type:Number},
+    appraiser3:{type:String},
+    appraiser3percent: {type:{type:Number}},
+    appraiser3fee:{type:Number},
+    irpercent: {type:Number},
+    irfee: {type:Number},
+    totalPercent: {type:Number},
+    hourlycharge: {type:Boolean}
+});
+const JobEntry = mongoose.model('JobEntry', jobEntrySchema)
+module.exports = JobEntry
